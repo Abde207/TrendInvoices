@@ -1,0 +1,596 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #f3f5f7;
+    color: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+/* LANGUAGE */
+
+.language-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-card {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.language-card h1 {
+    margin-bottom: 24px;
+}
+
+.lang-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.92;
+}
+
+.primary-btn {
+    background: #111827;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.secondary-btn {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* FORM */
+
+.top-bar {
+    margin-bottom: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #d5d9de;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #111827;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+td input {
+    width: 100%;
+}
+
+.total-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-header small {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+.table-actions {
+    margin-top: 18px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+/* TOTALS */
+
+.totals-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.total-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-actions {
+    margin-top: 30px;
+}
+
+/* PREVIEW */
+
+.preview-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.invoice-paper {
+    background: white;
+
+    width: 195mm;
+    min-height: 210mm;
+    padding: 12mm;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 18px;
+
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 32px;
+}
+
+.company-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.company-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 28px;
+}
+
+.invoice-title {
+    margin-top: 6px;
+    color: #666;
+}
+
+/*.invoice-meta {
+    min-width: 220px;
+}
+*/
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.customer-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.customer-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.customer-card h3 {
+    margin-bottom: 10px;
+}
+
+.preview-table {
+    margin-bottom: 28px;
+}
+
+.currency-subhead {
+    background: #f1f1f1;
+    color: #222;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: auto;
+    width: 320px;
+}
+
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.notes-section {
+    margin-top: 30px;
+}
+
+.notes-section h3 {
+    margin-bottom: 10px;
+}
+
+/* RTL */
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .invoice-header {
+    flex-direction: row-reverse;
+}
+
+body.rtl .company-section {
+    flex-direction: row-reverse;
+}
+
+/*body.rtl .meta-row,*/
+
+body.rtl .summary-box {
+    flex-direction: row-reverse;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .invoice-paper {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+    }
+
+    .summary-section {
+        width: 100%;
+    }
+}
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .preview-actions {
+        display: none;
+    }
+
+    .invoice-paper {
+        box-shadow: none;
+        margin: 0;
+    }
+}
+
+/* WATERMARK LOGO */
+
+.invoice-paper {
+    position: relative;
+    overflow: hidden;
+}
+
+.watermark-logo {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    opacity: 0.05;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+.watermark-logo img {
+    width: 340px;
+    object-fit: contain;
+}
+
+/* STAMP */
+
+.invoice-stamp {
+    position: absolute;
+
+    top: 120px;
+    right: 60px;
+
+    transform: rotate(-20deg);
+
+    border: 6px solid #16a34a;
+    color: #16a34a;
+
+    padding: 12px 28px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    border-radius: 14px;
+
+    opacity: 0.18;
+
+    letter-spacing: 4px;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 10;
+}
+
+/* KEEP CONTENT ABOVE WATERMARK */
+
+.invoice-header,
+.customer-section,
+.preview-table,
+.summary-section,
+.notes-section {
+    position: relative;
+    z-index: 2;
+}
+
+#previewOrderNo {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+/* =========================
+   PROFESSIONAL RTL FIXES
+========================= */
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* HEADER */
+
+body.rtl .invoice-header {
+    flex-direction: row-reverse;
+}
+
+body.rtl .company-section {
+    flex-direction: row-reverse;
+}
+
+/* ORDER INFO */
+
+body.rtl .invoice-meta {
+    align-items: flex-end;
+    text-align: right;
+}
+
+/*body.rtl .order-row {
+    flex-direction: row-reverse;
+}
+*/
+.order-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 32px;
+}
+
+.order-value {
+    min-width: 80px;
+}
+
+.invoice-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 320px;
+}
+
+.order-row {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.order-label {
+    font-weight: 700;
+    color: #222;
+}
+
+.order-value {
+    color: #dc2626;
+    font-weight: 700;
+
+    min-width: 140px;
+
+    display: inline-block;
+}
+
+/* CUSTOMER CARDS */
+
+body.rtl .customer-card {
+    text-align: right;
+}
+
+/* TABLE */
+
+body.rtl table {
+    direction: rtl;
+}
+
+body.rtl th,
+body.rtl td {
+    text-align: center;
+}
+
+/* NOTES */
+
+body.rtl .notes-section {
+    text-align: right;
+}
+
+/* SUMMARY */
+
+body.rtl .summary-section {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+body.rtl .summary-box {
+    flex-direction: row-reverse;
+}
+
+/* PAID STAMP */
+
+body.rtl .invoice-stamp {
+    right: auto;
+    left: 45px;
+
+    transform: rotate(18deg);
+}
+
+/* WATERMARK */
+
+body.rtl .watermark-logo {
+    left: 50%;
+}
+
+/* INPUTS */
+
+body.rtl input,
+body.rtl textarea {
+    text-align: right;
+}
+
+/* FORM LABELS */
+
+body.rtl .form-group label {
+    text-align: right;
+}
+
+/* BUTTONS */
+
+body.rtl .preview-actions,
+body.rtl .main-actions,
+body.rtl .table-actions {
+    justify-content: flex-start;
+}
+
+.order-label,
+.order-value {
+    display: inline-block;
+}
+
+.order-label {
+    font-weight: 700;
+    color: #222;
+}
+
+.order-value {
+    color: #dc2626;
+    font-weight: 500;
+
+    min-width: 50x;
+
+    text-align: left;
+}
